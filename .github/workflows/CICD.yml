@@ -1,0 +1,27 @@
+
+
+name: CI/CD 
+
+on: [push]
+
+env:
+  ARTIFACT_NAME: myARTIFACT
+
+jobs:
+  main:
+    job1:
+      - name: Checkout and run
+        uses: actions/checkout@v3
+        run: csc csharp.cs
+    job2:
+      - name: build
+        needs: [job1]
+        uses: actions/checkout@v3
+       
+      - name: artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: .
+       
+       
