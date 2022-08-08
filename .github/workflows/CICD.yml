@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout and run
-        run: csc csharp.cs
+        run: dotnet run csharp.cs
   job2:
     runs-on: windows-latest
     needs: [job1]
