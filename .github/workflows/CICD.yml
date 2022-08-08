@@ -8,14 +8,17 @@ env:
   ARTIFACT_NAME: myARTIFACT
 
 jobs:
-  main:
-    job1:
+  job1:
+    runs-on: windows-latest
+    steps:
       - name: Checkout and run
-        uses: actions/checkout@v3
         run: csc csharp.cs
-    job2:
+  job2:
+    runs-on: windows-latest
+    needs: [job1]
+    steps:
       - name: build
-        needs: [job1]
+        
         uses: actions/checkout@v3
        
       - name: artifact
