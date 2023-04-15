@@ -21,6 +21,6 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
       - name: test
-        run: dotnet test =-no-build --verbosity normal
+        run: dotnet test --no-build --verbosity normal
       - name: Publish
         run: dotnet publish src/Git-Actions-Practise.csproj -c Release -o consoleApp
