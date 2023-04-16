@@ -49,4 +49,7 @@ jobs:
       - name: Set to executable 
         run: |
           ls
-          chmod +x Git-Actions-Practise       
+          chmod +x Git-Actions-Practise
+
+      - name: Run app
+        run: ./Git-Actions-Practise       
