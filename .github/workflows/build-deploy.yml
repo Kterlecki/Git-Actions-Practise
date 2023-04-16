@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: githubServiceApp
+          name: consoleApp 
       - name: Set to executable 
         run: |
           chmod +x GitActionProject       
