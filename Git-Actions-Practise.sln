@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{21069F52-2CC1-4B21-B581-67B23BA61ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git-Actions-Practise", "src\Git-Actions-Practise.csproj", "{1DE4C49E-5D20-4BB6-B8ED-52BA9D85F0F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git-Actions-Practise", "src\GitActionProject\Git-Actions-Practise.csproj", "{1DE4C49E-5D20-4BB6-B8ED-52BA9D85F0F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

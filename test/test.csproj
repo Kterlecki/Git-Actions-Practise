@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Git-Actions-Practise.csproj" />
+    <ProjectReference Include="..\src\GitActionProject\Git-Actions-Practise.csproj" />
   </ItemGroup>
 
 </Project>
