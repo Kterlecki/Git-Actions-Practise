@@ -48,4 +48,5 @@ jobs:
           name: consoleApp 
       - name: Set to executable 
         run: |
-          chmod +x GitActionProject       
+          ls
+          chmod +x consoleApp       
