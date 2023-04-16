@@ -25,10 +25,10 @@ jobs:
       - name: Publish
         run: dotnet publish src/Git-Actions-Practise.csproj -c Release -o consoleApp
       - name: List
-        run: pwd | ls
+        run: pwd | ls | cd consoleapp | ls
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
           name: consoleApp
-          path: src/consoleApp/**
+          path: consoleApp/**
           if-no-files-found: error
