@@ -16,19 +16,24 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 6.0.x
+
       - name: Restore dependencies
         run: dotnet restore
+
       - name: Build
         run: dotnet build --no-restore
+
       - name: test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test --no-build 
+
       - name: Publish
-        run: dotnet publish src/Git-Actions-Practise.csproj -c Release -o consoleApp
-      - name: List
-        run: pwd | ls | cd consoleApp | ls
-      - name: Upload a Build Artifact
+        run: dotnet publish src/Git-Actions-Practise.csproj --self-contained=true -c Release -o publish /p:PublishSingleFile=true
+      
+
+      - name: Upload Artifact for deployment job
         uses: actions/upload-artifact@v3.1.2
         with:
           name: consoleApp
-          path: consoleApp/**
+          path: ./publish
           if-no-files-found: error
+          
